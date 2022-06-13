@@ -1,0 +1,688 @@
+<?php
+
+use App\Database\BaseInsertPermissions;
+
+class InsertPermissions extends BaseInsertPermissions
+{
+    protected array $permissions = [
+        [
+            'method_name' => 'batches-index',
+            'display_name' => 'Получить партии',
+            'description' => 'Получить партии',
+            'module_name' => 'batches',
+        ],
+        [
+            'method_name' => 'batches-show',
+            'display_name' => 'Получить партию',
+            'description' => 'Получить партию',
+            'module_name' => 'batches',
+        ],
+        [
+            'method_name' => 'batches-last_created',
+            'display_name' => 'batches-last_created',
+            'description' => 'batches-last_created',
+            'is_shown' => false,
+            'module_name' => 'batches',
+        ],
+        [
+            'method_name' => 'batches-sort_fields',
+            'display_name' => 'batches-sort_fields',
+            'description' => 'batches-sort_fields',
+            'is_shown' => false,
+            'module_name' => 'batches',
+        ],
+        [
+            'method_name' => 'batches-search_fields',
+            'display_name' => 'batches-search_fields',
+            'description' => 'batches-search_fields',
+            'is_shown' => false,
+            'module_name' => 'batches',
+        ],
+        [
+            'method_name' => 'batches-filter_fields',
+            'display_name' => 'batches-filter_fields',
+            'description' => 'batches-filter_fields',
+            'is_shown' => false,
+            'module_name' => 'batches',
+        ],
+        [
+            'method_name' => 'batches-create',
+            'display_name' => 'Создать партию',
+            'description' => 'Создать партию',
+            'module_name' => 'batches',
+        ],
+        [
+            'method_name' => 'batches-update',
+            'display_name' => 'Редактировать партию',
+            'description' => 'Редактировать партию',
+            'module_name' => 'batches',
+        ],
+        [
+            'method_name' => 'batches-delete',
+            'display_name' => 'Удалить партию',
+            'description' => 'Удалить партию',
+            'module_name' => 'batches',
+        ],
+        [
+            'method_name' => 'batches-search',
+            'display_name' => 'Поиск партии',
+            'description' => 'Поиск партии',
+            'module_name' => 'batches',
+        ],
+        [
+            'method_name' => 'batches-numbers',
+            'display_name' => 'Получить ID и названия партии',
+            'description' => 'Получить ID и названия партии',
+            'module_name' => 'batches',
+        ],
+        [
+            'method_name' => 'batches-status',
+            'display_name' => 'Статус партии',
+            'description' => 'Статус партии',
+            'module_name' => 'batches',
+        ],
+        [
+            'method_name' => 'batches-statuses',
+            'display_name' => 'Статусы партии',
+            'description' => 'Статусы партии',
+            'module_name' => 'batches',
+        ],
+        [
+            'method_name' => 'suppliers-index',
+            'display_name' => 'Получить поставщиков',
+            'description' => 'Получить поставщиков',
+            'module_name' => 'suppliers',
+        ],
+        [
+            'method_name' => 'suppliers-show',
+            'display_name' => 'Получить поставщика',
+            'description' => 'Получить поставщика',
+            'module_name' => 'suppliers',
+        ],
+        [
+            'method_name' => 'suppliers-last_created',
+            'display_name' => 'suppliers-last_created',
+            'description' => 'suppliers-last_created',
+            'is_shown' => false,
+            'module_name' => 'suppliers',
+        ],
+        [
+            'method_name' => 'suppliers-sort_fields',
+            'display_name' => 'suppliers-sort_fields',
+            'description' => 'suppliers-sort_fields',
+            'is_shown' => false,
+            'module_name' => 'suppliers',
+        ],
+        [
+            'method_name' => 'suppliers-search_fields',
+            'display_name' => 'suppliers-search_fields',
+            'description' => 'suppliers-search_fields',
+            'is_shown' => false,
+            'module_name' => 'suppliers',
+        ],
+        [
+            'method_name' => 'suppliers-filter_fields',
+            'display_name' => 'suppliers-filter_fields',
+            'description' => 'suppliers-filter_fields',
+            'is_shown' => false,
+            'module_name' => 'suppliers',
+        ],
+        [
+            'method_name' => 'suppliers-create',
+            'display_name' => 'Создание поставщика',
+            'description' => 'Создание поставщика',
+            'module_name' => 'suppliers',
+        ],
+        [
+            'method_name' => 'suppliers-update',
+            'display_name' => 'Редактирование поставщика',
+            'description' => 'Редактирование поставщика',
+            'module_name' => 'suppliers',
+        ],
+        [
+            'method_name' => 'suppliers-delete',
+            'display_name' => 'Удаление поставщика',
+            'description' => 'Удаление поставщика',
+            'module_name' => 'suppliers',
+        ],
+        [
+            'method_name' => 'suppliers-search',
+            'display_name' => 'Поиск поставщиков',
+            'description' => 'Поиск поставщиков',
+            'module_name' => 'suppliers',
+        ],
+        [
+            'method_name' => 'suppliers-autocomplete',
+            'display_name' => 'Автопоиск поставщиков',
+            'description' => 'Автопоиск поставщиков',
+            'module_name' => 'suppliers',
+            'is_shown' => false,
+        ],
+        [
+            'method_name' => 'suppliers-names',
+            'display_name' => 'Названия поставщиков',
+            'description' => 'Названия поставщиков',
+            'module_name' => 'suppliers',
+        ],
+        [
+            'method_name' => 'suppliers-types',
+            'display_name' => 'Типы поставщиков',
+            'description' => 'Типы поставщиков',
+            'module_name' => 'suppliers',
+        ],
+        [
+            'method_name' => 'publishers-index',
+            'display_name' => 'Получить издателей',
+            'description' => 'Получить издателей',
+            'module_name' => 'publishers',
+        ],
+        [
+            'method_name' => 'publishers-show',
+            'display_name' => 'Получить издателя',
+            'description' => 'Получить издателя',
+            'module_name' => 'publishers',
+        ],
+        [
+            'method_name' => 'publishers-last_created',
+            'display_name' => 'publishers-last_created',
+            'description' => 'publishers-last_created',
+            'module_name' => 'publishers',
+            'is_shown' => false,
+        ],
+        [
+            'method_name' => 'publishers-sort_fields',
+            'display_name' => 'publishers-sort_fields',
+            'description' => 'publishers-sort_fields',
+            'is_shown' => false,
+            'module_name' => 'publishers',
+        ],
+        [
+            'method_name' => 'publishers-search_fields',
+            'display_name' => 'publishers-search_fields',
+            'description' => 'publishers-search_fields',
+            'is_shown' => false,
+            'module_name' => 'publishers',
+        ],
+        [
+            'method_name' => 'publishers-filter_fields',
+            'display_name' => 'publishers-filter_fields',
+            'description' => 'publishers-filter_fields',
+            'is_shown' => false,
+            'module_name' => 'publishers',
+        ],
+        [
+            'method_name' => 'publishers-create',
+            'display_name' => 'Создание издателя',
+            'description' => 'Создание издателя',
+            'module_name' => 'publishers',
+        ],
+        [
+            'method_name' => 'publishers-update',
+            'display_name' => 'Редактирование издателя',
+            'description' => 'Редактирование издателя',
+            'module_name' => 'publishers',
+        ],
+        [
+            'method_name' => 'publishers-delete',
+            'display_name' => 'Удаление издателя',
+            'description' => 'Удаление издателя',
+            'module_name' => 'publishers',
+        ],
+        [
+            'method_name' => 'publishers-search',
+            'display_name' => 'Поиск издателей',
+            'description' => 'Поиск издателей',
+            'module_name' => 'publishers',
+        ],
+        [
+            'method_name' => 'publishers-autocomplete',
+            'display_name' => 'Автопоиск издателей',
+            'description' => 'Автопоиск издателей',
+            'is_shown' => false,
+            'module_name' => 'publishers',
+        ],
+        [
+            'method_name' => 'publishers-names',
+            'display_name' => 'Названия издателей',
+            'description' => 'Названия издателей',
+            'module_name' => 'publishers',
+        ],
+        [
+            'method_name' => 'items-index',
+            'display_name' => 'Получить экземпляры',
+            'description' => 'Получить экземпляры',
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'items-show',
+            'display_name' => 'Получить экземпляр',
+            'description' => 'Получить экземпляр',
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'items-last_created',
+            'display_name' => 'items-last_created',
+            'description' => 'items-last_created',
+            'is_shown' => false,
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'items-sort_fields',
+            'display_name' => 'items-sort_fields',
+            'description' => 'items-sort_fields',
+            'is_shown' => false,
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'items-search_fields',
+            'display_name' => 'items-search_fields',
+            'description' => 'items-search_fields',
+            'is_shown' => false,
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'items-filter_fields',
+            'display_name' => 'items-filter_fields',
+            'description' => 'items-filter_fields',
+            'is_shown' => false,
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'items-create',
+            'display_name' => 'Создание экземпляра',
+            'description' => 'Создание экземпляра',
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'items-update',
+            'display_name' => 'Редактирование экземпляра',
+            'description' => 'Редактирование экземпляра',
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'items-delete',
+            'display_name' => 'Удаление экземпляра',
+            'description' => 'Удаление экземпляра',
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'items-recreate',
+            'display_name' => 'Пересоздание экземпляра',
+            'description' => 'Пересоздание экземпляра',
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'items-search',
+            'display_name' => 'Поиск экземпляров',
+            'description' => 'Поиск экземпляров',
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'items-autocomplete',
+            'display_name' => 'Автопоиск экземпляров',
+            'description' => 'Автопоиск экземпляров',
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'items-create_data',
+            'display_name' => 'items-create_data',
+            'description' => 'items-create_data',
+            'is_shown' => false,
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'items-by_batch',
+            'display_name' => 'Получить экземпляры по ID Партии',
+            'description' => 'Получить экземпляры по ID Партии',
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'items-specialities',
+            'display_name' => 'Получить специализации экземпляров',
+            'description' => 'Получить специализации экземпляров',
+            'module_name' => 'items',
+        ],
+        [
+            'method_name' => 'inventory_books-sort_fields',
+            'display_name' => 'inventory_books-sort_fields',
+            'description' => 'inventory_books-sort_fields',
+            'is_shown' => false,
+            'module_name' => 'inventory_books',
+        ],
+        [
+            'method_name' => 'inventory_books-search_fields',
+            'display_name' => 'inventory_books-search_fields',
+            'description' => 'inventory_books-search_fields',
+            'is_shown' => false,
+            'module_name' => 'inventory_books',
+        ],
+        [
+            'method_name' => 'inventory_books-filter_fields',
+            'display_name' => 'inventory_books-filter_fields',
+            'description' => 'inventory_books-filter_fields',
+            'is_shown' => false,
+            'module_name' => 'inventory_books',
+        ],
+        [
+            'method_name' => 'inventory_books-search',
+            'display_name' => 'Поиск инвентарных книг',
+            'description' => 'Поиск инвентарных книг',
+            'module_name' => 'inventory_books',
+        ],
+        [
+            'method_name' => 'inventory_books-export',
+            'display_name' => 'Экспорт инвентарных книг в Excel',
+            'description' => 'Экспорт инвентарных книг в Excel',
+            'module_name' => 'inventory_books',
+        ],
+        [
+            'method_name' => 'inventory_books-print',
+            'display_name' => 'Печать инвентарных книг в PDF',
+            'description' => 'Печать инвентарных книг в PDF',
+            'module_name' => 'inventory_books',
+        ],
+        [
+            'method_name' => 'book_history-sort_fields',
+            'display_name' => 'book_history-sort_fields',
+            'description' => 'book_history-sort_fields',
+            'is_shown' => false,
+            'module_name' => 'books_history',
+        ],
+        [
+            'method_name' => 'book_history-search_fields',
+            'display_name' => 'book_history-search_fields',
+            'description' => 'book_history-search_fields',
+            'is_shown' => false,
+            'module_name' => 'books_history',
+        ],
+        [
+            'method_name' => 'book_history-filter_fields',
+            'display_name' => 'book_history-filter_fields',
+            'description' => 'book_history-filter_fields',
+            'is_shown' => false,
+            'module_name' => 'books_history',
+        ],
+        [
+            'method_name' => 'book_history-search',
+            'display_name' => 'Поиск истории книг',
+            'description' => 'Поиск истории книг',
+            'module_name' => 'books_history',
+        ],
+        [
+            'method_name' => 'book_history-export',
+            'display_name' => 'Экспорт истории книг в Excel',
+            'description' => 'Экспорт истории книг в Excel',
+            'module_name' => 'books_history',
+        ],
+        [
+            'method_name' => 'most_read-search',
+            'display_name' => 'Поиск самых читаемых книг',
+            'description' => 'Поиск самых читаемых книг',
+            'module_name' => 'mrbooks',
+        ],
+        [
+            'method_name' => 'most_read-export',
+            'display_name' => 'Экспорт самых читаемых книг в Excel',
+            'description' => 'Экспорт самых читаемых книг в Excel',
+            'module_name' => 'mrbooks',
+        ],
+        [
+            'method_name' => 'most_read-sort_fields',
+            'display_name' => 'most_read-sort_fields',
+            'description' => 'most_read-sort_fields',
+            'is_shown' => false,
+            'module_name' => 'mrbooks',
+        ],
+        [
+            'method_name' => 'most_read-search_fields',
+            'display_name' => 'most_read-search_fields',
+            'description' => 'most_read-search_fields',
+            'is_shown' => false,
+            'module_name' => 'mrbooks',
+        ],
+        [
+            'method_name' => 'most_read-filter_fields',
+            'display_name' => 'most_read-filter_fields',
+            'description' => 'most_read-filter_fields',
+            'is_shown' => false,
+            'module_name' => 'mrbooks',
+        ],
+        [
+            'method_name' => 'attendance-virtual',
+            'display_name' => 'Посещаемость по сайту',
+            'description' => 'Посещаемость по сайту',
+            'module_name' => 'attendance',
+        ],
+        [
+            'method_name' => 'attendance-departments',
+            'display_name' => 'Посещаемость по библиотеке',
+            'description' => 'Посещаемость по библиотеке',
+            'module_name' => 'attendance',
+        ],
+        [
+            'method_name' => 'barcode-sort_fields',
+            'display_name' => 'barcode-sort_fields',
+            'description' => 'barcode-sort_fields',
+            'is_shown' => false,
+            'module_name' => 'report',
+        ],
+        [
+            'method_name' => 'barcode-search_fields',
+            'display_name' => 'barcode-search_fields',
+            'description' => 'barcode-search_fields',
+            'is_shown' => false,
+            'module_name' => 'report',
+        ],
+        [
+            'method_name' => 'barcode-search_fields',
+            'display_name' => 'barcode-search_fields',
+            'description' => 'barcode-search_fields',
+            'is_shown' => false,
+            'module_name' => 'report',
+        ],
+        [
+            'method_name' => 'barcode-search',
+            'display_name' => 'Поиск баркодов',
+            'description' => 'Поиск баркодов',
+            'module_name' => 'report',
+        ],
+        [
+            'method_name' => 'barcode-print',
+            'display_name' => 'Печать баркодов в PDF',
+            'description' => 'Печать баркодов в PDF',
+            'module_name' => 'report',
+        ],
+        [
+            'method_name' => 'barcode-init',
+            'display_name' => 'Инициализация баркодов',
+            'description' => 'Инициализация баркодов',
+            'module_name' => 'report',
+        ],
+        [
+            'method_name' => 'service-sort_fields',
+            'display_name' => 'service-sort_fields',
+            'description' => 'service-sort_fields',
+            'is_shown' => false,
+            'module_name' => 'service_desk',
+        ],
+        [
+            'method_name' => 'service-search_fields',
+            'display_name' => 'service-search_fields',
+            'description' => 'service-search_fields',
+            'is_shown' => false,
+            'module_name' => 'service_desk',
+        ],
+        [
+
+            'method_name' => 'service-filter_fields',
+            'display_name' => 'service-filter_fields',
+            'description' => 'service-filter_fields',
+            'is_shown' => false,
+            'module_name' => 'service_desk',
+        ],
+        [
+
+            'method_name' => 'service-user_types',
+            'display_name' => 'service-user_types',
+            'description' => 'service-user_types',
+            'is_shown' => false,
+            'module_name' => 'service_desk',
+        ],
+        [
+
+            'method_name' => 'service-show_user',
+            'display_name' => 'Показать пользователя',
+            'description' => 'Показать пользователя',
+            'module_name' => 'service_desk',
+        ],
+        [
+
+            'method_name' => 'service-user_search',
+            'display_name' => 'Поиск пользователей',
+            'description' => 'Поиск пользователей',
+            'module_name' => 'service_desk',
+        ],
+        [
+
+            'method_name' => 'service-media_search',
+            'display_name' => 'Поиск материалов в сервисе',
+            'description' => 'Поиск материалов в сервисе',
+            'module_name' => 'service_desk',
+        ],
+        [
+
+            'method_name' => 'service-media_search-by_inventory',
+            'display_name' => 'Поиск материалов по инвентарю',
+            'description' => 'Поиск материалов по инвентарю',
+            'module_name' => 'service_desk',
+        ],
+        [
+
+            'method_name' => 'service-media_back',
+            'display_name' => 'Возврат книг',
+            'description' => 'Возврат книг',
+            'module_name' => 'service_desk',
+        ],
+        [
+
+            'method_name' => 'service-media_give',
+            'display_name' => 'Выдача книг',
+            'description' => 'Выдача книг',
+            'module_name' => 'service_desk',
+        ],
+        [
+
+            'method_name' => 'cataloging-search',
+            'display_name' => 'Поиск материалов в каталогизации',
+            'description' => 'Поиск материалов в каталогизации',
+            'module_name' => 'cataloging',
+        ],
+        [
+
+            'method_name' => 'cataloging-search_fields',
+            'display_name' => 'cataloging-search_fields',
+            'description' => 'cataloging-search_fields',
+            'is_shown' => false,
+            'module_name' => 'cataloging',
+        ],
+        [
+
+            'method_name' => 'cataloging-types',
+            'display_name' => 'cataloging-types',
+            'description' => 'cataloging-types',
+            'is_shown' => false,
+            'module_name' => 'cataloging',
+        ],
+        [
+
+            'method_name' => 'cataloging-show',
+            'display_name' => 'Получить материал в каталогизации',
+            'description' => 'Получить материал в каталогизации',
+            'module_name' => 'cataloging',
+        ],
+        [
+
+            'method_name' => 'cataloging-export',
+            'display_name' => 'Экспорт материала каталогизации в Excel',
+            'description' => 'Экспорт материала каталогизации в Excel',
+            'module_name' => 'cataloging',
+        ],
+        [
+
+            'method_name' => 'cataloging-print',
+            'display_name' => 'Печать материала каталогизации в PDF',
+            'description' => 'Печать материала каталогизации в PDF',
+            'module_name' => 'cataloging',
+        ],
+        [
+
+            'method_name' => 'cataloging-edit',
+            'display_name' => 'Редактирование материала каталогизации',
+            'description' => 'Редактирование материала каталогизации',
+            'module_name' => 'cataloging',
+        ],
+        [
+
+            'method_name' => 'cataloging-authority',
+            'display_name' => 'Authority каталогизации',
+            'description' => 'Authority каталогизации',
+            'module_name' => 'cataloging',
+        ],
+        [
+
+            'method_name' => 'cataloging-complete',
+            'display_name' => 'Завершить каталогизацию',
+            'description' => 'Завершить каталогизацию',
+            'module_name' => 'cataloging',
+        ],
+        [
+
+            'method_name' => 'cataloging-history',
+            'display_name' => 'История каталогизации',
+            'description' => 'История каталогизации',
+            'module_name' => 'cataloging',
+        ],
+        [
+
+            'method_name' => 'ksu-get',
+            'display_name' => 'Получить КСУ отчет',
+            'description' => 'Получить КСУ отчет',
+            'module_name' => 'ksu',
+        ],
+        [
+
+            'method_name' => 'ksu-export',
+            'display_name' => 'Экспорт КСУ отчета в Excel',
+            'description' => 'Экспорт КСУ отчета в Excel',
+            'module_name' => 'ksu',
+        ],
+        [
+
+            'method_name' => 'stat-get',
+            'display_name' => 'Получить Стат-отчет',
+            'description' => 'Получить Стат-отчет',
+            'module_name' => 'ksu',
+        ],
+        [
+
+            'method_name' => 'stat-export',
+            'display_name' => 'Экспорт Стат-отчета в Excel',
+            'description' => 'Экспорт Стат-отчета в Excel',
+            'module_name' => 'ksu',
+        ],
+        [
+
+            'method_name' => 'admin_configuration-get',
+            'display_name' => 'Получить настройки конфигурации админки',
+            'description' => 'Получить настройки конфигурации админки',
+            'module_name' => 'website',
+        ],
+        [
+
+            'method_name' => 'admin_configuration-edit',
+            'display_name' => 'Редактировать настройки конфигурации админки',
+            'description' => 'Редактировать настройки конфигурации админки',
+            'module_name' => 'website',
+        ],
+    ];
+}

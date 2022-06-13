@@ -1,0 +1,31 @@
+export default{
+	setRequest(state,data){
+		state.request=data
+	},
+	setSearchRequest(state,data){
+		state.search_request=data;
+	},
+	setQuery(state,data){
+		state.query=data
+	},
+	setSearching(state,data){
+		state.searching=data;
+	},
+	setResults(state,data){
+		state.results=data;
+	},
+	setFilter(state,data){
+		state.filter_data=data;
+
+		state.filter_search={
+			types:data.type_key,
+			languages:data.language
+		};
+	},
+	setAllData(state,data){
+		state.all_results=data;
+	},
+	setWrapperIndex(state,data){
+		state.wrapper_index=data;
+	}
+}

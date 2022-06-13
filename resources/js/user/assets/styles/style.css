@@ -1,0 +1,300 @@
+/*defaults*/
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875em;
+    color: #333;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    min-height: 100vh;
+    height: 100%;
+}
+
+#app {
+    height: 100%;
+}
+
+a {
+    text-decoration: none !important;
+    display: block;
+}
+
+input,
+button {
+    padding: 0.625em 1.25em;
+}
+
+input {
+    border: 0.125em solid #FF9D29;
+    border-radius: 0.3125em;
+    caret-color: #FF9D29;
+}
+
+input[type=text] {
+    min-width: 12.5em;
+}
+
+button {
+    border: none;
+    line-height: 1.3125em;
+    color: white;
+    background-color: #9E2629;
+    border-radius: 0.3125em;
+}
+
+
+/*customs*/
+
+.filter-width {
+    width: 13.8vw;
+    min-width: 12.5em;
+    margin-right: 3.125em;
+}
+
+
+/*styles*/
+
+.warn {
+    position: absolute;
+    top: -35%;
+    transition: .3s;
+    color: #aaa;
+    opacity: 0;
+}
+
+.flex-0 {
+    flex: 0 !important;
+}
+
+.logo {
+    width: 7.5em;
+}
+
+.padding {
+    padding-right: 11vw;
+    padding-left: 11vw;
+    transition: padding .3s;
+}
+
+.no-border-right {
+    border-right: none !important;
+}
+
+.no-border-right-radius {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.no-border-left-radius {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.border-grey {
+    border-color: #DADADA !important;
+}
+
+.border-width {
+    border-width: 0.125em !important;
+}
+
+.border-green{
+    border-color: #00BB78 !important;
+}
+
+.border-black{
+    border-color: #535456 !important;
+}
+
+.text-ellipsis {
+    width: 90%;
+}
+
+.mr--5 {
+    margin-right: -.3125em;
+}
+
+.w-20 {
+    width: 20% !important;
+}
+
+.w-10 {
+    width: 10% !important;
+}
+
+.w-min-120 {
+    min-width: 8.125em;
+}
+
+.w-min-0 {
+    min-width: 0;
+}
+
+.h-min-100 {
+    min-height: 100%;
+}
+
+.height-1 {
+    height: 1px;
+}
+
+
+/*rewrite bootstrap*/
+
+.font-weight-bold {
+    font-weight: 500!important;
+}
+
+.font-style-italic{
+    font-style: italic;
+}
+
+
+/* springshare */
+
+.lcs_slide_out-r {
+    top: 130px !important;
+}
+
+
+/* landing */
+
+.home {
+    position: relative;
+    /* hard... minus navbar height */
+    min-height: max(calc(100vh - 250px), 660px);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #D9D9D9;
+}
+
+.lines,
+.avatar,
+.l_info {
+    position: absolute;
+}
+
+.lines,
+.avatar {
+    left: 0;
+}
+
+.avatar {
+    bottom: 0px;
+    height: max(34vw, 34vh);
+    z-index: 2;
+    max-height: 75vh;
+}
+
+.lines {
+    bottom: -1px;
+    z-index: 3;
+}
+
+.z-index-6 {
+    z-index: 6;
+}
+
+.pe-none {
+    pointer-events: none;
+    user-select: none;
+}
+
+.l_info {
+    top: 21.875em;
+    right: 5.625em;
+    ;
+    left: 37.5em;
+    color: #363B4D;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 300;
+    text-align: right;
+}
+
+.l_info_name {
+    font-size: 4em;
+    font-weight: 400;
+}
+
+.l_info_birthday {
+    font-size: 2.375em;
+}
+
+.l_info_info {
+    font-size: 1.75em;
+    ;
+}
+
+.outline-blue,.outline-green {
+    background-color: transparent;
+    border: 1px solid;
+}
+
+.outline-blue {
+    color: #3F98EB;
+    border-color: #3F98EB;
+}
+
+.outline-blue:hover {
+    background-color: #3F98EB;
+    color: #F4F4F4;
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 1300px) {
+    .padding {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+    .avatar {
+        height: max(40vw, 40vh);
+    }
+}
+
+@media screen and (max-width:990px) {
+    .l_info {
+        width: 100%;
+        text-align: center;
+    }
+    .avatar {
+        height: max(45vh, 45vw);
+    }
+    .l_info,
+    .avatar {
+        position: static;
+    }
+}
+
+@media screen and (max-width: 791px) {
+    .padding {
+        padding-left: 1.25em;
+        padding-right: 1.25em;
+    }
+    .filter-width {
+        width: unset;
+        min-width: 0;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .chat {
+        width: unset !important;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .chat {
+        width: 20em m !important;
+    }
+    .chat_parent {
+        right: 1.5em !important;
+    }
+}

@@ -1,0 +1,124 @@
+#navbar,
+#sidebar {
+    background-color: #181818 !important;
+}
+
+#navbar {
+    color: #f4efdb !important;
+}
+
+.bg-white {
+    background-color: #222 !important;
+}
+
+#main {
+    background-color: #101010 !important;
+}
+
+html,
+input,
+button,
+select,
+textarea,
+body {
+    color: #f4efdb !important;
+}
+
+.placeholder {
+    background-color: #222 !important;
+}
+
+.select {
+    position: relative;
+}
+
+.select:after {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #f4efdb;
+    position: absolute;
+    top: 40%;
+    right: 5px;
+    content: "";
+    z-index: 98;
+}
+
+.select select {
+    position: relative;
+    background: none;
+}
+
+* {
+    /*firefox only scrollbar*/
+    scrollbar-color: #c5c5c5 #101010;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 0.3125em;
+    height: 0.3125em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c5c5c5 !important;
+}
+
+::-webkit-scrollbar-track {
+    background: #101010 !important;
+}
+
+.vm--modal {
+    background-color: #222 !important;
+}
+
+div.vm--overlay {
+    background-color: rgba(51, 51, 51, 0.8) !important;
+}
+
+.table {
+    color: #f4efdb !important;
+}
+
+.bg-lightgrey {
+    background-color: #0b0b0b !important;
+}
+
+.bg-orange {
+    background-color: #0062d6 !important;
+}
+
+.outline-black {
+    color: #f4efdb !important;
+}
+
+.outline-black:hover {
+    background-color: #f4efdb;
+    color: #333 !important;
+}
+
+.result {
+    color: #333 !important;
+}
+
+.border-black {
+    border-color: #f4efdb !important;
+}
+
+.text-black {
+    color: #f4efdb !important;
+}
+
+.bg-grey {
+    background-color: #4a4538 !important;
+}
+
+.cancel-button {
+    background-color: #0b0b0b !important;
+    color: #f4efdb !important;
+}
+
+.cancel-button:hover {
+    border-color: #f4efdb !important;
+}

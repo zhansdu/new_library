@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5e63e7f4-92b1-4776-b05c-6d02a75b6c96" name="library">
+        <fileTransfer accessType="SFTP" host="10.100.1.23" port="22" sshConfigId="1f736714-b9ab-4350-b4c3-e94469caacbd" sshConfig="library@10.100.1.23:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="e16547a2-ee16-4670-982f-808e2f95860b" name="ezproxy">
+        <fileTransfer accessType="SFTP" host="10.100.1.26" port="22" sshConfigId="a45c5bee-bc36-4784-b7fd-3e97388b319c" sshConfig="ezproxy@10.100.1.26:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,66 @@
+/*!
+ * Chart.js v2.9.4
+ * https://www.chartjs.org
+ * (c) 2020 Chart.js Contributors
+ * Released under the MIT License
+ */
+
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <http://feross.org>
+ * @license  MIT
+ */
+
+/*!
+ * Vue.js v2.6.11
+ * (c) 2014-2019 Evan You
+ * Released under the MIT License.
+ */
+
+/*!
+ * chartjs-plugin-datalabels v0.7.0
+ * https://chartjs-plugin-datalabels.netlify.com
+ * (c) 2019 Chart.js Contributors
+ * Released under the MIT license
+ */
+
+/*!
+ * vue-i18n v8.22.4 
+ * (c) 2021 kazuya kawaguchi
+ * Released under the MIT License.
+ */
+
+/*!
+ * vuex v3.6.2
+ * (c) 2021 Evan You
+ * @license MIT
+ */
+
+/*! For license information please see quill.htmlEditButton.min.js.LICENSE.txt */
+
+/*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
+
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/**
+ * [chartjs-plugin-labels]{@link https://github.com/emn178/chartjs-plugin-labels}
+ *
+ * @version 1.1.0
+ * @author Chen, Yi-Cyuan [emn178@gmail.com]
+ * @copyright Chen, Yi-Cyuan 2017-2018
+ * @license MIT
+ */
+
+//! moment.js
+
+//! moment.js locale configuration

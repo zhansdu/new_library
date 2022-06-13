@@ -1,0 +1,20 @@
+#sidebar,
+#navbar {
+    background-color: #fff !important;
+}
+
+#sidebar {
+    color: black!important;
+}
+
+.text-white {
+    color: black!important;
+}
+
+.link:hover>.text-black {
+    color: black !important;
+}
+
+.seen {
+    background-color: #bbbbbb !important;
+}

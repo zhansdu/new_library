@@ -1,0 +1,39 @@
+step 1
+sudo mkdir /usr/lib/oracle
+sudo mkdir /usr/lib/oracle/21.6
+sudo mkdir /usr/lib/oracle/21.6/client64
+step 2
+sudo cp instantclient-basic-linux.x64-21.6.0.0.0dbru.zip /usr/lib/oracle/21.6/client64
+sudo cp instantclient-sdk-linux.x64-21.6.0.0.0dbru.zip /usr/lib/oracle/21.6/client64
+
+cd /usr/lib/oracle/21.6/client64
+
+sudo unzip instantclient-basic-linux.x64-21.6.0.0.0dbru.zip
+sudo unzip instantclient-sdk-linux.x64-21.6.0.0.0dbru.zip
+
+sudo mv instantclient_21_6 lib
+step 3 
+sudo su -
+step 3
+sudo echo /usr/lib/oracle/21.6/client64/lib > /etc/ld.so.conf.d/oracle.conf
+step 4
+ldconfig
+step 6
+sudo apt-get install php-dev php-pear build-essential libaio1
+step 7 
+sudo pecl channel-update pecl.php.net
+sudo pecl install oci8
+instantclient,/usr/lib/oracle/21.6/client64/lib
+step 8
+sudo echo "extension=oci8.so" >> /etc/php/8.0/cli/php.ini
+sudo systemctl restart apache2
+step 9
+cd /etc/php/8.0/mods-available/
+sudo nano oci.ini
+extension = oci8.so
+step 10
+cd /etc/php/8.0/apache2/conf.d
+sudo ln -s /etc/php/8.0/mods-available/oci.ini 20-oci.ini
+sudo systemctl restart apache2
+step 11
+php -i | grep oci

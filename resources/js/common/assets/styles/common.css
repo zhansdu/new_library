@@ -1,0 +1,102 @@
+/* basic */
+
+* {
+    cursor: inherit;
+    /*firefox only scrollbar*/
+    scrollbar-color: #c5c5c5 white;
+    scrollbar-width: thin;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+
+/* custom */
+
+.transition {
+    transition: .3s;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.rotate {
+    transform: rotate(180deg) !important;
+}
+
+.text-no-wrap,
+.text-no-wrap>* {
+    white-space: nowrap;
+}
+
+.link {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.link:hover {
+    color: #FFD850 !important;
+}
+
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+*:disabled {
+    cursor: default;
+}
+
+button:disabled,
+button[disabled] {
+    border: 1px solid #999999 !important;
+    background-color: #cccccc !important;
+    color: #666666 !important;
+}
+
+
+/*scrollbars*/
+
+* {
+    /*firefox only*/
+    scrollbar-color: #c5c5c5 white;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 0.3125em;
+    height: 0.3125em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c5c5c5;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+
+/* remove bootstrap */
+
+label {
+    margin-bottom: unset;
+}
+
+
+/*responsiveness*/
+
+@media screen and (min-width: 1440px) {
+    html {
+        font-size: 1em !important;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    html {
+        font-size: 1.125em !important;
+    }
+}

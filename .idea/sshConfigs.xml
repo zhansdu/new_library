@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="10.100.1.23" id="1f736714-b9ab-4350-b4c3-e94469caacbd" port="22" nameFormat="DESCRIPTIVE" username="library" />
+      <sshConfig authType="PASSWORD" host="10.100.1.26" id="a45c5bee-bc36-4784-b7fd-3e97388b319c" port="22" nameFormat="DESCRIPTIVE" username="ezproxy" />
+    </configs>
+  </component>
+</project>
